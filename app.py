@@ -4,7 +4,7 @@ from auth import auth_bp
 from students import students_bp
 from fees import fees_bp
 from dashboard import dashboard_bp
-
+from paystack import paystack_bp
 app = Flask(__name__)
 app.config['JSON_SORT_KEYS'] = False
 
@@ -16,6 +16,7 @@ app.register_blueprint(auth_bp, url_prefix='/api/auth')
 app.register_blueprint(students_bp, url_prefix='/api/students')
 app.register_blueprint(fees_bp, url_prefix='/api/fees')
 app.register_blueprint(dashboard_bp, url_prefix='/api/dashboard')
+app.register_blueprint(paystack_bp, url_prefix='/api/paystack')
 
 
 @app.route('/')
