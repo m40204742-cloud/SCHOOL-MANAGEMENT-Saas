@@ -1,3 +1,4 @@
+from sms import sms_bp
 from flask import Flask, jsonify
 from database import init_db
 from auth import auth_bp
@@ -17,6 +18,7 @@ app.register_blueprint(students_bp, url_prefix='/api/students')
 app.register_blueprint(fees_bp, url_prefix='/api/fees')
 app.register_blueprint(dashboard_bp, url_prefix='/api/dashboard')
 app.register_blueprint(paystack_bp, url_prefix='/api/paystack')
+app.register_blueprint(sms_bp, url_prefix='/api/sms')
 
 
 @app.route('/')
